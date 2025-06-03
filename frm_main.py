@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QGraphicsView, QLabel, QLineEdit,
-    QMainWindow, QMenuBar, QPushButton, QSizePolicy,
-    QStackedWidget, QStatusBar, QTextBrowser, QWidget)
+from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QMainWindow,
+    QMenuBar, QPushButton, QSizePolicy, QStackedWidget,
+    QStatusBar, QWidget)
 
 class Ui_frm_main(object):
     def setupUi(self, frm_main):
@@ -26,9 +26,6 @@ class Ui_frm_main(object):
         frm_main.resize(654, 565)
         self.centralwidget = QWidget(frm_main)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.textBrowser = QTextBrowser(self.centralwidget)
-        self.textBrowser.setObjectName(u"textBrowser")
-        self.textBrowser.setGeometry(QRect(40, 300, 256, 192))
         self.stackedWidget = QStackedWidget(self.centralwidget)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setGeometry(QRect(0, 0, 661, 511))
@@ -57,9 +54,6 @@ class Ui_frm_main(object):
         self.zurueck_b = QPushButton(self.page_2)
         self.zurueck_b.setObjectName(u"zurueck_b")
         self.zurueck_b.setGeometry(QRect(30, 20, 75, 51))
-        self.graphicsView = QGraphicsView(self.page_2)
-        self.graphicsView.setObjectName(u"graphicsView")
-        self.graphicsView.setGeometry(QRect(60, 230, 256, 192))
         self.label_2 = QLabel(self.page_2)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(410, 310, 49, 16))
