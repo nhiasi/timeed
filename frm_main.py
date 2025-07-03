@@ -116,6 +116,7 @@ class Ui_frm_main(object):
         self.plus.setText(QCoreApplication.translate("frm_main", u"PushButton", None))
         self.label.setText(QCoreApplication.translate("frm_main", u"TextLabel", None))
         self.lb_Timeed.setText(QCoreApplication.translate("frm_main", u"Timeed", None))
+        self.edit_day_createF.setInputMask("")
         self.button_setjetzt_createF.setText(QCoreApplication.translate("frm_main", u"Jetzt", None))
         self.zurueck_b.setText(QCoreApplication.translate("frm_main", u"Zur\u00fcck", None))
         self.label_day_createF.setText(QCoreApplication.translate("frm_main", u"Tag:", None))
@@ -124,6 +125,7 @@ class Ui_frm_main(object):
         self.label_year_createF.setText(QCoreApplication.translate("frm_main", u"Jahr:", None))
         self.label_second_createF.setText(QCoreApplication.translate("frm_main", u"Sekunde:", None))
         self.label_minute_createF.setText(QCoreApplication.translate("frm_main", u"Minute:", None))
+        self.edit_second_createF.setInputMask("")
         self.label_hour_createF.setText(QCoreApplication.translate("frm_main", u"Stunde:", None))
         self.button_setheute_createF.setText(QCoreApplication.translate("frm_main", u"Heute", None))
     # retranslateUi

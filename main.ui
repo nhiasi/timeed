@@ -83,6 +83,9 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="inputMask">
+       <string comment="9" extracomment="9"/>
+      </property>
      </widget>
      <widget class="QPushButton" name="button_setjetzt_createF">
       <property name="geometry">
@@ -236,6 +239,9 @@
         <width>41</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="inputMask">
+       <string comment="9"/>
       </property>
      </widget>
      <widget class="QLabel" name="label_hour_createF">
