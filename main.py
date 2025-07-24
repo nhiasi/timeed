@@ -1,9 +1,9 @@
 from time import sleep
 
-from Cython.Build.Inline import strip_common_indent
+#from Cython.Build.Inline import strip_common_indent
 #qt imports
 from PySide6.QtWidgets import QApplication, QMainWindow
-from html5lib.constants import tagTokenTypes
+#om html5lib.constants import tagTokenTypes
 
 from frm_main import Ui_frm_main
 
@@ -12,6 +12,8 @@ from datetime import datetime
 import time
 import threading
 
+
+from validation import Validation
 
 class FrmMain(QMainWindow, Ui_frm_main):
     def __init__(self):
@@ -29,6 +31,7 @@ class FrmMain(QMainWindow, Ui_frm_main):
         self.button_setjetzt_createF.clicked.connect(self.set_time_now)
         self.button_setheute_createF.clicked.connect(self.set_date_today)
 
+
         ##update
         self.stop_run_update = False
 
@@ -43,7 +46,30 @@ class FrmMain(QMainWindow, Ui_frm_main):
         self.set_date_today()
 
     def create_new(self):
-        pass
+
+        def false_input(list):
+            #TODO mach ma das dann das entsprchende feld wackelt und rot wird oder so
+            print("Falsche eingabe")
+
+
+        in_sekunde = self.edit_second_createF.text()
+        in_minute = self.edit_minute_createF.text()
+        in_stunde = self.edit_hour_createF.text()
+        in_tag = self.edit_day_createF.text()
+        in_monat = self.edit_month_createF.text()
+        in_jahr = self.edit_year_createF.text()
+
+        date_validateion = Validation
+        date_validateion(in_jahr, in_monat, in_tag, in_stunde, in_minute, in_sekunde)
+
+        if date_validateion.:
+            #false_input(false_time_list)
+            print()
+
+
+
+
+
 
 
     def set_time_now(self):
@@ -86,22 +112,6 @@ class FrmMain(QMainWindow, Ui_frm_main):
         self.edit_day_createF.setText(aktueller_tag)
         self.edit_month_createF.setText(aktueller_montat)
         self.edit_year_createF.setText(aktuelles_jahr)
-
-#TODO validierung für die eingabe hinzufügen; evtl so ne kleine shake animation wenn was nd passt und frabe oder so
-    def validierung(self):
-
-        sekunde = self.edit_second_createF.text()
-        minute = self.edit_minute_createF.text()
-        stunde = self.edit_hour_createF.text()
-        tag = self.edit_day_createF.text()
-        monat  = self.edit_month_createF.text()
-        jahr  = self.edit_year_createF.text()
-
-
-        #sek
-
-       # if sekunde < 0 or
-
 
 
 if __name__ == "__main__":
