@@ -1,9 +1,9 @@
-from time import sleep
 
 #from Cython.Build.Inline import strip_common_indent
+
 #qt imports
 from PySide6.QtWidgets import QApplication, QMainWindow
-#om html5lib.constants import tagTokenTypes
+#from html5lib.constants import tagTokenTypes
 
 from frm_main import Ui_frm_main
 
@@ -11,9 +11,11 @@ from frm_main import Ui_frm_main
 from datetime import datetime
 import time
 import threading
+from time import sleep
 
-
+#eigen imports
 from validation import Validation
+
 
 class FrmMain(QMainWindow, Ui_frm_main):
     def __init__(self):
@@ -59,14 +61,15 @@ class FrmMain(QMainWindow, Ui_frm_main):
         in_monat = self.edit_month_createF.text()
         in_jahr = self.edit_year_createF.text()
 
-        date_validateion = Validation
-        date_validateion(in_jahr, in_monat, in_tag, in_stunde, in_minute, in_sekunde)
+        date_validateion = Validation(in_jahr, in_monat, in_tag, in_stunde, in_minute, in_sekunde)
 
-        if date_validateion.:
-            #false_input(false_time_list)
-            print()
+        if date_validateion.false_time_list:
+            false_input(date_validateion.false_time_list)
 
-
+        #TODO
+        # timer erstellt datei und grafik
+        # timer auf main frame anzeigen
+        # zähler logig bauen
 
 
 
