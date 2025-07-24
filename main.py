@@ -8,6 +8,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow
 from frm_main import Ui_frm_main
 
 #sys imports
+import os
 from datetime import datetime
 import time
 import threading
@@ -37,6 +38,8 @@ class FrmMain(QMainWindow, Ui_frm_main):
         ##update
         self.stop_run_update = False
 
+    def __read_config(self):
+        with open()
     def go_main(self):
         self.stackedWidget.setCurrentWidget(self.page)
 
@@ -66,10 +69,13 @@ class FrmMain(QMainWindow, Ui_frm_main):
         if date_validateion.false_time_list:
             false_input(date_validateion.false_time_list)
 
+        print("start create")
         #TODO
         # timer erstellt datei und grafik
         # timer auf main frame anzeigen
         # zähler logig bauen
+
+        os.path.join()
 
 
 
