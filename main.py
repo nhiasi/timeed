@@ -1,6 +1,3 @@
-
-#from Cython.Build.Inline import strip_common_indent
-
 #qt imports
 from PySide6.QtWidgets import QApplication, QMainWindow
 #from html5lib.constants import tagTokenTypes
